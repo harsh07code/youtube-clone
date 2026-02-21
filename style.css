@@ -1,0 +1,184 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:sans-serif;
+}
+
+body{
+background:#0f0f0f;
+color:white;
+}
+
+/* NAVBAR */
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:12px 25px;
+background:#202020;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.left{
+display:flex;
+align-items:center;
+gap:15px;
+font-size:1.2rem;
+cursor:pointer;
+}
+
+.logo{
+color:red;
+font-weight:bold;
+font-size:1.4rem;
+}
+
+.navbar input{
+width:40%;
+padding:10px 15px;
+border-radius:25px;
+border:none;
+background:#121212;
+color:white;
+}
+
+.right{
+display:flex;
+align-items:center;
+gap:18px;
+}
+
+.right img{
+width:35px;
+height:35px;
+border-radius:50%;
+cursor:pointer;
+}
+
+/* LAYOUT */
+.layout{
+display:flex;
+}
+
+/* SIDEBAR */
+.sidebar{
+width:220px;
+background:#181818;
+height:calc(100vh - 60px);
+padding:20px;
+}
+
+.sidebar p{
+margin:15px 0;
+padding:10px;
+border-radius:10px;
+cursor:pointer;
+transition:.3s;
+}
+
+.sidebar p:hover{
+background:#303030;
+}
+
+.active{
+background:#303030;
+}
+
+/* VIDEOS GRID */
+.videos{
+flex:1;
+padding:25px;
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+gap:25px;
+}
+
+/* CARD */
+.card{
+cursor:pointer;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+}
+
+/* THUMBNAIL */
+.thumb{
+position:relative;
+border-radius:15px;
+overflow:hidden;
+}
+
+.thumb img{
+width:100%;
+display:block;
+transition:.4s;
+}
+
+.card:hover img{
+transform:scale(1.08);
+}
+
+.time{
+position:absolute;
+bottom:8px;
+right:8px;
+background:black;
+padding:3px 7px;
+font-size:.8rem;
+border-radius:5px;
+}
+
+/* PLAY OVERLAY */
+.overlay{
+position:absolute;
+inset:0;
+background:rgba(0,0,0,0.6);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:1.5rem;
+opacity:0;
+transition:.3s;
+}
+
+.card:hover .overlay{
+opacity:1;
+}
+
+/* INFO */
+.info{
+display:flex;
+gap:12px;
+margin-top:12px;
+}
+
+.info img{
+width:40px;
+height:40px;
+border-radius:50%;
+}
+
+.info h4{
+font-size:1rem;
+margin-bottom:5px;
+}
+
+.info p{
+color:#aaa;
+font-size:.85rem;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+.sidebar{
+display:none;
+}
+.navbar input{
+width:60%;
+}
+}
